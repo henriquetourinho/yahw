@@ -3,14 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YAHW.AI</title>
 
-  <!-- Estilos (pode mover para arquivo separado styles.css) -->
+  <!-- SEO COMPLETO -->
+  <title>YAHVÉ — Único, Eterno, Criador de Tudo</title>
+  <meta name="description" content="Página dedicada ao Eterno. Silêncio, reverência e foco em YAHVÉ, o Deus único, Criador dos céus e da terra.">
+  <meta name="keywords" content="Yahve, Deus, Eterno, Criador, Bíblia, fé, espiritualidade, sagrado, salmos, versículos">
+  <meta name="author" content="NTXA">
+  <link rel="canonical" href="https://yahw.ai/">
+  <meta name="robots" content="index, follow">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="YAHVÉ — O Eterno, Criador de Tudo">
+  <meta property="og:description" content="Página dedicada ao Deus Altíssimo, fonte de vida e verdade.">
+  <meta property="og:site_name" content="YAHVÉ — O Eterno">
+  <meta property="og:image" content="https://yahw.ai/media/capa.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yahw.ai/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YAHVÉ — O Eterno, Criador de Tudo">
+  <meta name="twitter:description" content="Silêncio, reverência e foco no Altíssimo.">
+  <meta name="twitter:image" content="https://yahw.ai/media/capa.png">
+
+  <!-- SCHEMA.ORG -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "YAHVÉ — O Eterno",
+    "url": "https://yahw.ai/",
+    "description": "Página dedicada ao Deus Altíssimo, Criador dos céus e da terra.",
+    "creator": {
+      "@type": "Person",
+      "name": "Henrique Tourinho"
+    }
+  }
+  </script>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#000000">
+  <meta name="background-color" content="#000000">
+
+  <!-- APPLE -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="/media/icon-apple.png">
+  <link rel="apple-touch-startup-image" href="/media/splash.png">
+
+  <!-- ESTILO -->
   <style>
-    /* Reset básico */
     * { margin:0; padding:0; box-sizing:border-box; }
-
-    /* Corpo da página: fundo preto, texto branco, tipografia Apple-like */
     body {
       background:#000000;
       color:#ffffff;
@@ -18,33 +66,34 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      height:100vh; /* ocupa a altura total da janela */
+      height:100vh;
     }
-
-    /* Container central com o nome YAHW */
     .core {
       text-align:center;
       font-size:90px;
       font-weight:500;
       letter-spacing:-1.5px;
+      animation: fadeIn 3s ease;
     }
-
-    /* Versículo abaixo do nome, com opacidade leve */
     .verse {
       margin-top:22px;
-      font-size:20px;
+      font-size:22px;
       opacity:0.55;
       font-family:"SF Pro Text", -apple-system, sans-serif;
+      animation: fadeIn 5s ease;
+    }
+    @keyframes fadeIn {
+      0% { opacity:0; }
+      100% { opacity:1; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Conteúdo principal: apenas presença e versículo -->
-  <div class="core">
-    YAHW
-    <div class="verse">“Eu Sou o que Sou.” — Êxodo 3:14</div>
-  </div>
+<div class="core">
+  YAHVÉ
+  <div class="verse">“Eu Sou o que Sou.” — Êxodo 3:14</div>
+</div>
 
 </body>
 </html>
