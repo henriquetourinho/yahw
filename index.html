@@ -16,8 +16,8 @@
   <meta property="og:title" content="YAHW — O Eterno, Criador de Tudo">
   <meta property="og:description" content="Página dedicada ao Deus Altíssimo, fonte de vida e verdade.">
   <meta property="og:site_name" content="YAHW — O Eterno">
-  <meta property="og:image" content=">
-  <meta property="og:image:type" content="image/png">
+  <meta property="og:image" content="https://ntxa.xyz/media/capa.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
@@ -28,7 +28,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="YAHW — O Eterno, Criador de Tudo">
   <meta name="twitter:description" content="Silêncio, reverência e foco no Altíssimo.">
-  <meta name="twitter:image" content="https://yahw.ntxa.xyz/media/capa.jpg">
+  <meta name="twitter:image" content="https://ntxa.xyz/media/capa.jpg">
 
   <!-- SCHEMA.ORG -->
   <script type="application/ld+json">
@@ -59,6 +59,7 @@
   <!-- ESTILO -->
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
+
     body {
       background:#000000;
       color:#ffffff;
@@ -67,33 +68,82 @@
       align-items:center;
       justify-content:center;
       height:100vh;
+      overflow:hidden;
+      flex-direction:column;
     }
+
     .core {
       text-align:center;
       font-size:90px;
       font-weight:500;
-      letter-spacing:-1.5px;
       animation: fadeIn 3s ease;
+      letter-spacing:-1.5px;
+      margin-top:-40px;
     }
+
     .verse {
       margin-top:22px;
       font-size:22px;
       opacity:0.55;
-      font-family:"SF Pro Text", -apple-system, sans-serif;
-      animation: fadeIn 5s ease;
+      animation: fadeIn 1.5s ease;
+      transition: opacity 1s ease;
+      min-height:32px;
     }
+
     @keyframes fadeIn {
-      0% { opacity:0; }
-      100% { opacity:1; }
+      from { opacity:0; }
+      to { opacity:1; }
+    }
+
+    footer {
+      position:fixed;
+      bottom:12px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:14px;
+      opacity:0.25;
+      letter-spacing:1px;
+      font-family:"SF Pro Text", -apple-system, sans-serif;
     }
   </style>
 </head>
+
 <body>
 
 <div class="core">
   YAHW
-  <div class="verse">“Eu Sou o que Sou.” — Êxodo 3:14</div>
+  <div class="verse" id="verso">Carregando...</div>
 </div>
+
+<footer>128</footer>
+
+<script>
+  const versiculos = [
+    "“O Senhor é meu pastor, nada me faltará.” — Salmo 23:1",
+    "“O Eterno é minha luz e minha salvação.” — Salmo 27:1",
+    "“Aquietai-vos e sabei que Eu Sou Deus.” — Salmo 46:10",
+    "“Ele é o Alfa e o Ômega.” — Apocalipse 22:13",
+    "“O Céu e a Terra passarão, mas Minhas palavras não hão de passar.” — Mateus 24:35",
+    "“O Eterno é bom; Sua misericórdia dura para sempre.” — Salmo 100:5",
+    "“Bendize, ó minha alma, ao Senhor.” — Salmo 103:1"
+  ];
+
+  let index = 0;
+  const verso = document.getElementById("verso");
+
+  function trocarVerso() {
+    verso.style.opacity = 0;
+
+    setTimeout(() => {
+      verso.textContent = versiculos[index];
+      verso.style.opacity = 0.55;
+      index = (index + 1) % versiculos.length;
+    }, 1000);
+  }
+
+  trocarVerso();
+  setInterval(trocarVerso, 4000);
+</script>
 
 </body>
 </html>
