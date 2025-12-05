@@ -1,0 +1,31 @@
+/* styles.css */
+
+/* Reset básico */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Corpo da página: fundo preto, texto branco, tipografia Apple-like */
+body {
+  background:#000000;
+  color:#ffffff;
+  font-family: "SF Pro Display", -apple-system, sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh; /* ocupa a altura total da janela */
+}
+
+/* Container central com o nome YAHW */
+.core {
+  text-align:center;
+  font-size:90px;
+  font-weight:500;
+  letter-spacing:-1.5px;
+}
+
+/* Versículo abaixo do nome, com opacidade leve */
+.verse {
+  margin-top:22px;
+  font-size:20px;
+  opacity:0.55;
+  font-family:"SF Pro Text", -apple-system, sans-serif;
+}
